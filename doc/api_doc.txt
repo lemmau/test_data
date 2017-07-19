@@ -1,0 +1,40 @@
+# Endpoint 
+/api.php
+
+No estamos usando REST, los parametros GET se pasan por querystring
+
+# Consulta de estado de Orden/Planilla
+# ------------------------------------
+
+Parametros GET
+>tipo: (string) tipo de documento
+>nro: (int) numero de documento
+
+Respuesta (content-type: application/json)
+>result: 'OK' o 'ERROR'
+>data: 
+		en ok, un [objeto] con la informacion
+		en error la [descripcion]
+
+# Actualización de estado de Orden/Planilla
+# -----------------------------------------
+
+Parametros GET
+>tipo: (string) tipo de documento
+>nro: (int) numero de documento
+
+Parametros POST
+>estado: (int) el nuevo estado
+
+Respuesta (content-type: application/json)
+>result: 'OK' o 'ERROR'
+>data: 
+	en error la [descripcion]
+
+# Ejemplos:
+# ---------
+
+http://talonarios.cnrt.gob.ar/api.php?tipo=A&nro=20
+
+http://talonarios.cnrt.gob.ar/api.php?tipo=A&nro=20
+(POST Body) estado=1
