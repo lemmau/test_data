@@ -1,7 +1,7 @@
 # Control de Accesos
 
 ## Descripción
-	Aplicativo interno que busca llevar un control de los accesos a edificios y dependencias del Ministerio de Transporte. El objetivo es poder contar con una herramienta donde se pueda registrar el ingreso y egreso de las personas que trabajan, como así también tener un control de las personas que visitan las instalaciones.
+Aplicativo interno que busca llevar un control de los accesos a edificios y dependencias del Ministerio de Transporte. El objetivo es poder contar con una herramienta donde se pueda registrar el ingreso y egreso de las personas que trabajan, como así también tener un control de las personas que visitan las instalaciones.
 
 ## Módulos
 - Registro de Accesos
