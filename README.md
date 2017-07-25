@@ -1,41 +1,27 @@
-# Control de Accesos
+# CNRT - Control y Seguimiento de Talonarios
 
-## Descripción
-Aplicativo interno que busca llevar un control de los accesos a edificios y dependencias del Ministerio de Transporte. El objetivo es poder contar con una herramienta donde se pueda registrar el ingreso y egreso de las personas que trabajan, como así también tener un control de las personas que visitan las instalaciones.
+### DESCRIPCIÓN
+Aplicativo externo, desarrollado para la C.N.R.T. (Comisión Nacional de Regulación del Transporte) cuyo propósito final es el de llevar un Control y Seguimiento de los Talonarios que provee el Organismo a sus delegaciones y a las Fuerzas de Seguridad en la jurisdicción Nacional.
 
-## Módulos
-- Registro de Accesos
-- Reportes
-- ABM's
-	- **Edificios**
-	- **Empleados**
-	- Perfiles de **Usuario**
-	- **Contratistas**
-	- **Bloqueos** de Personas (se trate de Visitas ó Empleados)
-- **Auditoría**
+### CIRCUITO
+![Circuito]("doc/DB_DER.png")
 
-## Perfiles
-- Usuario Consulta Acceso
-- Usuario ABM
-- Administrador
-- Auditoría
+### OPERACIONES
+1.	**REGISTRO** de talonarios.
+2.	**ENTREGA** de talonarios. 
+3.	**ASIGNACIÓN** de talonarios/actas/ordenes de servicio o control u otro documento legal, que a futuro se defina, a un fiscalizador.
+4.	**RENDICIÓN** de actas/ordenes de servicio o control u otro documento legal, que a futuro se defina.
+5.	**ANULACIÓN** de actas/ordenes de servicio o control u otro documento legal, que a futuro se defina.
+Aparte de las citadas operaciones, se pueden realizar consultas relacionadas al stock, actas rendidas, anuladas, consultas de métricas por fiscalizador y visualización de remitos, dependiendo siempre del tipo de rol con el que se cuente.
 
+### ROLES
+- SUMINISTRO
+- COORDINADOR
+- AUDITORIA
+- ADMINISTRATIVO
+- RESPONSABLE_DELEGACION
 
-## Tipos de personas de ingreso
+### API REST
+Además, el aplicativo tiene una comunicación bi-direccional con el Organismo. Desde el mismo, se consumen datos de un WS de CNRT para mostrar aquellas **delegaciones** activas, **responsables** y **fiscalizadores** de delegaciones (en una futura versión, también otros documentos legales además de las Actas y Planillas ya cargadas). Por otra parte, desde el Ministerio de Transporte, se ofrecen los estados actuales de un Acta u Orden de Servicio, además de guardar estados de SIFAM recibidos por el mismo medio.
 
-1. **Empleado del edificio**
-	- no requiere autorizacion
-	- sólo Documento
-	- puede autorizar visitas
-2. **Empleado c/acceso autorizado** al edificio
-	- no req autorizacion
-	- no cuenta como "empleado" del edificio (sino visita)
-	- ingresa sólo con Documento
-3. **Empleado de otro Edificio**
-	- se cargan los datos automáticamente y el sistema indica que es un empleado pero requiere destino y autorizacion para ingresar.
-4. **Contratista**
-	- sólo con art vigente (control de backend)
-	- puede tener un periodo con vigencia adicional para su ingreso (subset del periodo de art). Para aquellos casos como el de Mantenimiento de Impresoras.
-	- se cargan autom. campos origen/destino, ya que estarán pre-cargados.
-5. **Visita** (genérico)
-	- requiere cargar todos los campos del formulario.
+Desde [AQUÌ](http://intranet.transporte.gob.ar:8087/api/doc) se accede a la documentación.
