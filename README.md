@@ -5,7 +5,8 @@ Aplicativo externo, desarrollado para la C.N.R.T. (Comisión Nacional de Regulac
 
 ### CIRCUITO
 ![Circuito("doc/DB_DER.png")]
-[![N|Solid](doc/DB_DER.png)]
+[!Circuito](doc/Circuito etapas.png)]
+
 ### OPERACIONES
 1.	**REGISTRO** de talonarios.
 2.	**ENTREGA** de talonarios. 
