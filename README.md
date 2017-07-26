@@ -5,7 +5,7 @@ Aplicativo externo, desarrollado para la C.N.R.T. (Comisión Nacional de Regulac
 
 ### CIRCUITO
 
-[!Circuito]("doc/Circuito etapas.png")]
+[!Circuito](doc/Circuito.png)]
 
 ### OPERACIONES
 1.	**REGISTRO** de talonarios.
